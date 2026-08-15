@@ -52,7 +52,7 @@ const hasPortrait =
     existsSync(join(process.cwd(), 'public', photoValue.replace(/^\//, ''))));
 ---
 
-<section id="home" class="relative min-h-screen overflow-hidden flex items-center">
+<section id="home" class="relative overflow-hidden flex items-start lg:min-h-screen lg:items-center">
   <div class="spotlight-bg" aria-hidden="true">
     <div class="spotlight spotlight-1"></div>
     <div class="spotlight spotlight-2"></div>
@@ -70,7 +70,7 @@ const hasPortrait =
   >
   </div>
 
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32 lg:py-0">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 lg:py-0">
     <div
       id="hero-canvas-wrapper"
       class="absolute overflow-hidden rounded-3xl pointer-events-none"
@@ -80,9 +80,9 @@ const hasPortrait =
     </div>
 
     <div
-      class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen lg:min-h-0 lg:py-32"
+      class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center lg:py-32"
     >
-      <div class="order-2 lg:order-1 space-y-6 relative">
+      <div class="order-1 space-y-6 relative">
         <p class="text-sm font-semibold tracking-widest text-highlight uppercase reveal">
           DIGITAL GROWTH · MEASUREMENT · LEAD GENERATION
         </p>
@@ -152,7 +152,7 @@ const hasPortrait =
       </div>
 
       <div
-        class="order-1 lg:order-2 flex justify-center lg:justify-end reveal"
+        class="order-2 flex justify-center lg:justify-end reveal"
         style="transition-delay: 0.2s;"
       >
         <div
@@ -723,13 +723,6 @@ const hasPortrait =
     box-shadow:
       4px 4px 12px rgba(0, 0, 0, 0.8),
       inset 1px 1px 0 rgba(99, 153, 255, 0.06);
-  }
-
-  @media (max-width: 1023px) {
-    .order-1 {
-      margin-top: -200px;
-      margin-bottom: -200px;
-    }
   }
 
   @media (max-width: 639px) {
