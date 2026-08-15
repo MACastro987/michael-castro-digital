@@ -1,11 +1,11 @@
 {
-  "title": "Michael Castro | Digital Growth & Measurement",
+  "title": "Michael Castro | Digital Acquisition & Revenue",
   "description": "I build and improve digital acquisition systems across paid search, analytics, attribution, CRM, lead generation, and revenue measurement.",
   "ogSiteName": "Michael Castro Digital",
   "shortName": "MCD",
   "tagline": "Building acquisition systems · Measuring revenue · Improving decisions",
   "themeStorageKey": "mcd-theme",
-  "web3formsKey": "YOUR_WEB3FORMS_KEY_HERE",
+  "web3formsKey": "PASTE_YOUR_KEY_HERE",
 
   "footerAttribution": {
     "builder": "Built with Astro",

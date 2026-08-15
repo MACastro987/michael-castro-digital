@@ -4,7 +4,7 @@
   "addressLocality": "Kansas City",
   "addressRegion": "KS",
   "title": "Digital Growth & Measurement",
-  "photo": "/images/personal/portrait.png",
+  "photo": "/images/personal/michael-castro.png",  
   "photoAlt": "Michael Castro",
   "email": "",
   "phone": "",
@@ -33,7 +33,7 @@
   "volunteer": "",
   "portfolioUrl": "https://michaelcastro.digital",
   "heroRole": "Digital Growth, Measurement & Lead Generation",
-  "heroSocialLinks": ["github"],
+  "heroSocialLinks": [],
   "bio": "I build digital acquisition and measurement systems that connect traffic, leads, CRM activity, and revenue.",
   "aboutLong": "My work sits at the intersection of acquisition, analytics, and technology. I build and improve systems spanning paid search, GA4, Google Tag Manager, attribution, CRM and lead tracking, executive reporting, and revenue measurement. I also build independent digital projects to test lead-generation, conversion, and monetization strategies firsthand."
 }

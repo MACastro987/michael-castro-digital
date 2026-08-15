@@ -1,5 +1,5 @@
 {
-  "layout": "grid",
+  "layout": "showcase",
   "items": [
     {
       "title": "Software Decision Guide",
@@ -17,13 +17,11 @@
         "Conversion Optimization"
       ],
       "icon": "command-line",
-      "sliderImage": "/images/projects/use-astro2.jpg",
+      "sliderImage": "/images/projects/sdg-home.png",
       "sliderOrder": 1,
-      "backgroundImage": "/images/projects/use-astro3.jpg",
+      "backgroundImage": "/images/projects/sdg-home.png",
       "images": [
-        "/images/projects/use-astro1.jpg",
-        "/images/projects/use-astro2.jpg",
-        "/images/projects/use-astro3.jpg"
+        "/images/projects/sdg-home.png"
       ],
       "link": "https://softwaredecisionguide.com",
       "colorIcon": "devicon:astro",

@@ -15,13 +15,11 @@ import { withBase } from '../lib/assetPath';
 import { existsSync, readdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
 
-const augmented = await augmentProjectsWithImages(projectsData as unknown as ProjectEntry[]);
-// Use GitHub-fetched featuredImage when available; fall back to sliderImage from JSON.
-// This keeps the slider populated even when GITHUB_USER is not configured.
-const featuredProjects = augmented
-  .map((p) => ({ ...p, featuredImage: p.featuredImage ?? p.sliderImage }))
+const featuredProjects = projectsData
+  .map((p) => ({ ...p, featuredImage: p.sliderImage }))
   .filter((p) => p.featuredImage)
   .sort((a, b) => (a.sliderOrder ?? 999) - (b.sliderOrder ?? 999));
+
 // Split "Frontend & Backend" so the "&" can be styled with a different colour in the template.
 const heroParts = personalData.heroRole.split(' & ');
 
@@ -86,14 +84,14 @@ const hasPortrait =
     >
       <div class="order-2 lg:order-1 space-y-6 relative">
         <p class="text-sm font-semibold tracking-widest text-highlight uppercase reveal">
-          Welcome to my portfolio
+          DIGITAL GROWTH · MEASUREMENT · LEAD GENERATION
         </p>
 
         <div class="reveal text-backdrop" style="transition-delay: 0.1s;">
           <h1 class="font-bold leading-tight" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">
-            Hi, I'm<br />
-            <span class="gradient-text">{personalData.name}</span>
-          </h1>
+            Build a Revenue Engine<br />
+            <span class="gradient-text">You Can Trust.</span>
+        </h1>
 
           <h2 class="text-slate-400 font-light mt-3" style="font-size: clamp(1rem, 2.2vw, 1.5rem);">
             {
@@ -117,16 +115,7 @@ const hasPortrait =
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 reveal" style="transition-delay: 0.3s;">
-          <a href="#contact" class="btn-primary text-center">Get In Touch</a>
-          {hasCv ? (
-            <a
-              href={cvHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-secondary text-center">Download CV</a>
-          ) : (
-            <button onclick="window.print()" class="btn-secondary text-center">Print Resume</button>
-          )}
+          <a href="#contact" class="btn-primary text-center">Start a Conversation</a>
         </div>
 
         <div class="flex items-center gap-6 reveal" style="transition-delay: 0.4s;">
@@ -167,7 +156,7 @@ const hasPortrait =
         style="transition-delay: 0.2s;"
       >
         <div
-          class="project-frame-outer project-frame-sizer w-72 h-72 sm:w-96 sm:h-96 lg:w-[450px] lg:h-[450px]"
+          class="project-frame-outer project-frame-sizer w-[90vw] h-[56vw] sm:w-[560px] sm:h-[350px] lg:w-[620px] lg:h-[388px]"
         >
           <article class="project-frame" id="project-frame">
             <div class="pf-header" id="project-frame-header">
@@ -1013,7 +1002,7 @@ const hasPortrait =
 
   .object-cover {
     object-fit: contain;
-    transform: scale(1.25);
+    transform: none;
   }
 </style>
 
