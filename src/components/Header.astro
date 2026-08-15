@@ -4,20 +4,6 @@ import menu from '../data/menu.json';
 import siteData from '../data/site.json';
 
 const { sections } = menu;
-
-// Build external nav links from site.json definitions, skipping any whose personal.json key is empty.
-// This lets site authors add potential platforms to navExternal without requiring all fields be filled.
-const external = siteData.navExternal
-  .map((item) => {
-    const value = (personalData as unknown as Record<string, string>)[item.personalKey] ?? '';
-    if (!value) return null;
-    return {
-      label: item.label,
-      desc: item.desc,
-      url: item.urlTemplate.replace('{value}', value),
-    };
-  })
-  .filter(Boolean) as { label: string; desc: string; url: string }[];
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
@@ -67,35 +53,6 @@ const external = siteData.navExternal
         </button>
       </div>
     </div>
-
-    <div id="dm-wrapper" class="dm-wrapper">
-      <div class="desktop-mega">
-        {
-          external.map((link, i) => (
-            <a href={link.url} target="_blank" rel="noopener" class="dm-item" style={`--i: ${i};`}>
-              <span class="dm-num">0{i + 1}</span>
-              <span class="dm-body">
-                <span class="dm-label">{link.label}</span>
-                <span class="dm-desc">{link.desc}</span>
-              </span>
-              <svg
-                class="dm-arrow"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-                />
-              </svg>
-            </a>
-          ))
-        }
-      </div>
-    </div>
   </nav>
 </header>
 
@@ -143,30 +100,6 @@ const external = siteData.navExternal
         ))
       }
     </nav>
-
-    <div class="overlay-bottom">
-      <p class="overlay-bottom-label">External</p>
-      {
-        external.map((link) => (
-          <a href={link.url} target="_blank" rel="noopener" class="overlay-quick-link">
-            {link.label}
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              class="overlay-ext-icon"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              />
-            </svg>
-          </a>
-        ))
-      }
-    </div>
   </div>
 </div>
 

@@ -3,26 +3,26 @@
     {
       "key": "sysadmin",
       "icon": "server-stack",
-      "title": "Design & Art Direction",
-      "description": "Visual identity, layout, typography, and the aesthetic decisions that make people stop and look twice. Whether print or screen, the goal is the same — work that holds up."
+      "title": "Analytics & Measurement",
+      "description": "GA4, Google Tag Manager, attribution, conversion tracking, data quality, and measurement systems built around business outcomes."
     },
     {
       "key": "webdev",
       "icon": "code-bracket-square",
-      "title": "Web Design & Development",
-      "description": "From wireframe to deployment — building sites and apps that look considered, perform well, and give visitors exactly what they came for."
+      "title": "Digital Acquisition",
+      "description": "Paid search, landing pages, conversion optimization, and acquisition systems designed to generate measurable revenue."
     },
     {
       "key": "freelance",
       "icon": "user-circle",
-      "title": "Creative Freelance",
-      "description": "Independent project work in photography, video, 3D, illustration, or wherever the brief leads. Direct to work with, flexible, and invested in the outcome."
+      "title": "CRM & Lead Generation",
+      "description": "Lead capture, CRM tracking, funnel measurement, and systems that connect marketing activity to qualified opportunities and revenue."
     },
     {
       "key": "leadership",
       "icon": "users",
-      "title": "Collaboration & Direction",
-      "description": "Working alongside teams, clients, and stakeholders to take a project from idea to shipped — clear communication, honest timelines, and work that actually gets done."
+      "title": "Revenue Intelligence",
+      "description": "Executive reporting and decision systems that turn acquisition, customer, and revenue data into clearer business decisions."
     }
   ]
 }
